@@ -1,0 +1,29 @@
+
+<div>
+  <div>
+    <form class="form-horizontal" [formGroup]="login">
+      <fieldset style="margin-top:60px">
+          <legend class="header">Login</legend>
+          <div style="margin-left: 35%;">
+              <div>
+                  <label for="txtlogin" class="form-group lblusd">User Name: </label>
+                  <input class="login" type="text" formControlName="login" id="txtlogin" placeholder="User Name">
+              </div>
+              <div class="form-group">
+                  <label for="txtpassword" class="lblpwd">Password: </label>
+                  <input class="login" type="text" formControlName="password" id="txtpassword" placeholder="Password">
+              </div>
+              <div class="form-group"> 
+                  <input type="submit" class="submit"  (click)="onFormSubmit()" class="btn btn-primary submit" value="Submit">
+              </div>
+              <div class="form-group">
+                  <input type="checkbox" formControlName="rem" id="rem">Remember me
+              </div>
+              <div style="padding-left: 84px;" class="form-group">
+                  <span>Don't have an Account?<a type="submit" id="remsignup" [routerLink]="['/registration']"> Sign Up</a></span>
+              </div>
+          </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

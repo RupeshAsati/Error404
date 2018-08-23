@@ -1,0 +1,32 @@
+.container{
+    width: 80%;
+    margin: 0 30%; /* Center the DIV horizontally */
+}
+.fixed-header, .fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+}
+.fixed-header{
+    top: 0;
+}
+.fixed-footer{
+    bottom: 0;
+}    
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 35px;
+    display: inline-block;
+}
+.container p{
+    line-height: 200px; /* Create scrollbar to test positioning */
+}
+.headerlogin{
+    padding-left: 25% !important;
+    color: lightblue !important;
+    font-size: 15px;
+    font-weight: bold;
+}

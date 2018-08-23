@@ -1,0 +1,106 @@
+<div class="row custom-row">
+  <div class="col-sm-5 custom-container jumbotron">
+    <form class="form-horizontal" [formGroup]="registration">
+      <fieldset style="margin-top:60px;">
+        <legend appError404directive>Registration</legend>
+        <div> 
+          <div class="form-group txtReg" style="padding-left:44px;">
+            <label  class="lbl" for="txtfirstName">First Name<span style="color:red">*</span>: </label>
+            <input class="txt" type="text" formControlName="firstName" id="txtfirstName" placeholder="Enter First Name">
+            <div *ngIf="firstName.invalid && firstName.touched" class="col-sm-3 text-danger firstcss">
+              <div *ngIf="firstName.errors?.required">
+                First Name can't be blank
+              </div>
+          </div>
+          </div> 
+          <div class="form-group txtReg" style="padding-left:47px;">
+            <label class="lbl" for="txtlastName">Last Name<span style="color:red">*</span>: </label>
+            <input class="txt" type="text" formControlName="lastName" id="txtlastName" placeholder="Enter Last Name">
+            <div *ngIf="lastName.invalid && lastName.touched" class="col-sm-3 text-danger firstcss">
+              <div *ngIf="lastName.errors?.required">
+                Last Name can't be blank
+              </div>
+            </div>
+          </div>
+          <div class="form-group txtReg email">
+            <label class="lbl" for="txtEmail">Email<span style="color:red">*</span>: </label>
+            <input class="txt" style="width: 20.6% !important;" type="text" formControlName="email" id="txtEmail" placeholder="Enter EmailId">
+            <div *ngIf="email.invalid && email.touched" class="col-sm-3 text-danger firstcss">
+              <div *ngIf="email.errors?.required" class="col-sm-3 text-danger emailerrorcss"> 
+                Email field can't be blank
+              </div>
+              <div *ngIf="email.errors?.pattern" class="emailcss">
+                The email id doesn't seem right
+              </div>
+            </div>
+          </div>
+          <div class="form-group txtReg gen">
+            <label class="lbl" for="select">Gender<span style="color:red">*</span>: </label>
+              <select id="select" formControlName="gender" style="width: 10%;height: 30px;">
+                <option value="">Select</option>
+                <option *ngFor="let g of genderList" [value]="g"> {{g}}</option>
+              </select>
+              <div *ngIf="gender.invalid && gender.touched" class="col-sm-3 text-danger genval">
+                <div *ngIf="gender.errors?.required" class="col-sm-3 text-danger genval"> 
+                Please Select the Gender
+                </div>
+              </div>
+          </div>
+          <div class="form-group txtReg" style="padding-left:50px;">
+            <label class="lbl" for="txtmobileNo" >Mobile No<span style="color:red">*</span>: </label>
+            <input type="text" class="txt" ng-minlength="10" ng-maxlength="10"  formControlName="mobileNo" id="txtmobileNo" placeholder="Enter Mobile Number">
+            <div *ngIf="mobileNo.invalid && mobileNo.touched" class="col-sm-3 text-danger mobile">
+              <div *ngIf="mobileNo.errors?.required" class="col-sm-3 text-danger mobile"> 
+                Mobile Number field can't be blank
+              </div>
+            </div>
+          </div>
+          <div class="form-group txtReg add">
+            <label for="txtAddress" class="lbladdress lbl">Address<span style="color:red">*</span>: </label>
+            <textarea class="txt" ng-bind-html="my.nice.description" formControlName="address" id="txtAddress" placeholder="Enter Address"></textarea>
+            <div *ngIf="address.invalid && address.touched" class="col-sm-3 text-danger">
+              <div *ngIf="address.errors?.required" class="col-sm-3 text-danger addr"> 
+                Address field can't be blank
+              </div>
+            </div>
+          </div>
+          <div class="form-group txtReg" formGroupName="passwords">
+              <div class="form-group password">
+                <label class="lbl" for="inputPassword">Password<span style="color:red">*</span>: </label>
+                <input type="password" formControlName="pwd" class="pwd" id="inputPassword" placeholder="Password">
+                <div *ngIf="passwords.controls.pwd.invalid && passwords.controls.pwd.touched" class="col-sm-3 text-danger pwds">
+                  <div *ngIf="passwords.controls.pwd.errors?.required" class="col-sm-3 text-danger pwds"> 
+                    Password field can't be blank
+                  </div>
+                </div>
+              </div>
+              <div class="form-group txtReg">
+                <label class="lbl" for="confirmPassword">Confirm Password<span style="color:red">*</span>: </label>
+                <input type="password" class="confirmpwd" formControlName="confirmPwd"  id="confirmPassword" placeholder=" Confirm Password">
+                <div *ngIf="passwords.controls.confirmPwd.invalid && passwords.controls.confirmPwd.touched" class="col-sm-3 text-danger confpwd">
+                  <div *ngIf="passwords.controls.confirmPwd.errors?.required" class="col-sm-3 text-danger confpwd"> 
+                    Confirm Password field can't be blank
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="form-group txtReg" style="margin-left: 170px;">
+            <input type="checkbox" formControlName="terms" id="terms">Terms & Conditions
+              <div *ngIf="terms.invalid && terms.touched" class="col-sm-3 text-danger chk">
+                  <div *ngIf="terms.errors?.required" class="col-sm-3 text-danger chk"> 
+                    Please check the check box
+                  </div>
+                </div>
+          </div>
+          <div class=" form-group txtReg" style="padding-left: 140px">
+              <input type="submit" [disabled]="!registration.valid"  (click)="onFormSubmit()"  class="btn btn-primary submit" value="Submit">
+                <button type="reset" class="btn btn-default cancle">Cancel</button>
+          </div>
+          <div class=" form-group txtReg" style="padding-left: 220px; text-decoration: none;">
+              <a type="submit" href="#" class="btn btn-primary submit" [routerLink]="['/login']">Sign In</a>
+          </div>
+        </div> 
+      </fieldset>
+    </form>
+  </div>
+</div>

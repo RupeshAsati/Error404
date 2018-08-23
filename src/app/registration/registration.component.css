@@ -1,0 +1,122 @@
+.header{
+    font-size: x-large;
+    font-weight: bold;
+    color: blue;
+}
+.txtReg{
+    padding-bottom: 0.5%;
+    margin-bottom: 10px;
+}
+.email{
+    padding-left:79px;
+}
+.gen{
+    padding-left:70px;
+}
+.add{
+    padding-left: 65px;
+}
+.password{
+    padding-bottom: 20px; 
+    padding-left:59px;
+}
+textarea{
+    height: 100px !important
+}
+.submit{
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    color: blue;
+}
+.cancle{
+        width: 100px;
+        height: 30px;
+        color: red;
+}
+.lbladdress{
+    float: left;
+    margin-top: 10px;
+    padding-right: 5px;
+}
+.txt{
+    width: 20%;
+    height: 30px;
+}
+.lbl{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+.pwd{
+    width: 20%;
+    height: 30px;
+
+}
+.confirmpwd{
+    width: 19.2%;
+    height: 30px;
+   
+}
+.firstcss{
+    float: right;
+    margin-top: 9px;
+    margin-right: 59%;
+    color: red;
+}
+.emailcss{
+    float: right;
+    margin-top: 2px;
+    margin-right: -10%;
+    color: red;
+    width: 201px;
+}
+.emailerrorcss{
+    float: right;
+    margin-top: 1px;
+    margin-right: -10%;
+    color: red;
+    width: 201px;
+}
+.mobile{
+    float: right;
+    margin-top: 5px;
+    margin-right: 44.5%;
+    color: red;
+    width: 237px;
+}
+
+.addr{
+    float: right;
+    margin-top: -65px;
+    margin-right: 54%;
+    color: red;
+    width: 235px;
+}
+.chk{
+    color:red;
+    margin-left: -3px;
+}
+.confpwd{
+    float: right;
+    margin-top: 4px;
+    margin-right: 41%;
+    color: red;
+    width: 260px;
+}
+.pwds{
+    float: right;
+    margin-top: 4px;
+    margin-right: 42.5%;
+    color: red;
+    width: 260px;
+}
+.genval{
+    float: right;
+    margin-top: 4px;
+    margin-right: 43%;
+    color: red;
+    width: 260px;
+
+}
